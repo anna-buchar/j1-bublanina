@@ -49,7 +49,45 @@ public class SpousteciTrida {
     // Pouzivejte napovidani v editoru.
     // Vyskakuje samo nebo pomoci Ctrl+Mezernik
 
-    cervenaMiska.nalozSiJedenKus(vajicka);
+
+    for (int i = 0; i < 4; i++) {
+      cervenaMiska.nalozSiJedenKus(vajicka);
+    }
+    cervenaMiska.nalozSiCelyObsah(pytlikCukru);
+    mixer.zamichej(cervenaMiska);
+    cervenaMiska.nalozSiJedenKus(maslo125g);
+    mixer.zamichej(cervenaMiska);
+
+    kuchynskaVaha.vynulujSeS(zlutaMiska);
+    zlutaMiska.nalozSiTrochu(pytlikMouky); //nejdřív přidám trochu mouky
+    while (kuchynskaVaha.zjistiHmotnost(zlutaMiska) != 250) { //opakuje se dokud váha není 250
+      int hmotnost = kuchynskaVaha.zjistiHmotnost(zlutaMiska);
+      System.out.println(hmotnost);
+      if (hmotnost > 250) {
+        zlutaMiska.vylozSiTrochu();
+      } else {zlutaMiska.nalozSiTrochu(pytlikMouky);}
+    }
+
+    cervenaMiska.nalozSiObsahJineMisky(zlutaMiska);
+    cervenaMiska.nalozSiCelyObsah(prasekDoPeciva);
+    mixer.zamichej(cervenaMiska);
+
+    plech.preberSiObsah(cervenaMiska);
+    for (int i = 0; i < 50; i++) {
+      plech.posypSeKusem(ovoce);
+    }
+
+    trouba.zapniSe(180);
+    trouba.nechejPect(5);
+    trouba.vlozSiDovnitr(plech);
+    trouba.nechejPect(25);
+    trouba.vypniSe();
+    trouba.vyndejObsahVen();
+
+
+
+
+
   }
 
 }
