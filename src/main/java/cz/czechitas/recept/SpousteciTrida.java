@@ -55,7 +55,7 @@ public class SpousteciTrida {
     }
     cervenaMiska.nalozSiCelyObsah(pytlikCukru);
     mixer.zamichej(cervenaMiska);
-    cervenaMiska.nalozSiJedenKus(maslo125g);
+    cervenaMiska.nalozSiCelyObsah(maslo125g);
     mixer.zamichej(cervenaMiska);
 
     kuchynskaVaha.vynulujSeS(zlutaMiska);
